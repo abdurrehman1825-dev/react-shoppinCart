@@ -49,16 +49,6 @@ const authSlice = createSlice({
       state.error = action.payload;
       console.log("login failed", state.error);
     });
-    /*  builder.addCase(fetchUserData.pending, (state) => {
-      state.isloggedIn = false;
-    });
-    builder.addCase(fetchUserData.fulfilled, (state, action) => {
-      state.user = action.payload;
-      console.log("user details = ", state.user);
-    });
-    builder.addCase(fetchUserData.rejected, (state, action) => {
-      state.error = action.payload;
-    }); */
   },
 });
 export const { logout } = authSlice.actions;
