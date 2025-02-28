@@ -2,20 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { loginUserAPI } from "../../api/api";
 import { fetchUserData } from "../user/userSlice";
 
-/* const fetchUserData = createAsyncThunk(
-  "auth/fetchUserData",
-  async (username, { rejectWithValue }) => {
-    try {
-      const response = await fetchUserDataAPI();
-      const users = response.data;
-      const user = users.find((user) => user.username == username);
-      return user;
-    } catch (error) {
-      return rejectWithValue(error.response.data);
-    }
-  }
-); */
-
 export const userLogin = createAsyncThunk(
   "auth/userLogin",
   async (userData, { dispatch, rejectWithValue }) => {
